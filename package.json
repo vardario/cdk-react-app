@@ -1,0 +1,25 @@
+{
+  "name": "@vardario/cdk-react-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --build",
+    "watch": "tsc --build --watch"
+  },
+  "author": "Sahin Vardar",
+  "license": "MIT",
+  "dependencies": {
+    "aws-cdk-lib": "^2.74.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vardario/cdk-react-app.git"
+  }
+}
