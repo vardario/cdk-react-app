@@ -1,8 +1,11 @@
 {
   "name": "@vardario/cdk-react-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "lib/index.js",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "test": "jest",
     "build": "tsc --build",
