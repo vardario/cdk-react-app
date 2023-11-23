@@ -1,28 +1,57 @@
 {
   "name": "@vardario/cdk-react-app",
-  "version": "0.1.1",
-  "description": "",
-  "main": "lib/index.js",
-  "files": [
-    "/lib"
-  ],
-  "scripts": {
-    "test": "jest",
-    "build": "tsc --build",
-    "watch": "tsc --build --watch"
-  },
-  "author": "Sahin Vardar",
+  "version": "0.0.0-development",
+  "description": "CDK construct to deploy a React app to AWS",
   "license": "MIT",
-  "dependencies": {
-    "aws-cdk-lib": "^2.74.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.5.0",
-    "jest": "^29.3.1",
-    "ts-jest": "^29.0.3"
-  },
+  "author": "Sahin Vardar",
   "repository": {
     "type": "git",
     "url": "git@github.com:vardario/cdk-react-app.git"
-  }
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "format": "prettier --plugin-search-dir . --write . && prettier-package-json --write && eslint --fix .",
+    "prepare": "husky install",
+    "repo-clean": "git clean -xdf -e .env",
+    "semantic-release": "semantic-release",
+    "test": "jest",
+    "watch": "tsc --build --watch"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "2.x",
+    "constructs": "^10.x"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.9.4",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "aws-cdk-lib": "^2.110.1",
+    "constructs": "^10.3.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-typescript-sort-keys": "^3.1.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.0",
+    "jest": "^29.3.1",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "prettier-package-json": "^2.8.0",
+    "semantic-release": "^22.0.8",
+    "ts-jest": "^29.0.3",
+    "typescript": "^5.3.2"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
+    ],
+    "package.json": "prettier-package-json --write"
+  },
+  "packageManager": "pnpm@8.10.5"
 }
