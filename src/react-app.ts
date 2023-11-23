@@ -212,8 +212,7 @@ export class ReactApp extends Construct {
         ]
       });
 
-      const record =
-        domain &&
+      domain &&
         new r53.ARecord(this, `${domain.domainName}_Alias}`, {
           recordName: domain.domainName,
           target: r53.RecordTarget.fromAlias(new r53t.CloudFrontTarget(this.webDistribution)),
