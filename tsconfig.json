@@ -13,5 +13,6 @@
     "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "declaration": true
-  }
+  },
+  "exclude": ["./src/tests/**/*"]
 }

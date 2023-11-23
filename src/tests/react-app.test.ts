@@ -1,8 +1,8 @@
 import * as cdk from 'aws-cdk-lib';
-import { RemovalPolicy } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import { MOCK_CERT_ARN, runConstructTest } from './test-utils.js';
-import { ReactApp, ReactAppConstructProps } from './react-app.js';
+import { MOCK_CERT_ARN, runConstructTest } from '../test-utils.js';
+import { ReactApp, ReactAppConstructProps } from '../react-app.js';
+import { describe, test } from 'vitest';
 
 function runTest(
   test: (template: Template) => void,
@@ -65,7 +65,7 @@ describe('react-app construct', () => {
       },
       () => ({
         bucketName,
-        removalPolicy: RemovalPolicy.RETAIN
+        removalPolicy: cdk.RemovalPolicy.RETAIN
       })
     );
   });
